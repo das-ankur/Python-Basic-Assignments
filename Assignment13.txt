@@ -1,0 +1,37 @@
+Q1. Can you create a programme or function that employs both positive and negative indexing? Is
+there any repercussion if you do so?
+Ans. Yes, we can create a program that employs both positive and negative indexing.
+          If a function can do both positive and negative indexing then it has a repercussion and
+     that is we need to pass extra parameters to indicate the type of indexing and function can be
+     complicated also.
+
+Q2. What is the most effective way of starting with 1,000 elements in a Python list? Assume that all
+elements should be set to the same value.
+Ans: l = [0] * 1000
+
+Q3. How do you slice a list to get any other part while missing the rest? (For example, suppose you
+want to make a new list with the elements first, third, fifth, seventh, and so on.)
+Ans. It is possible to slice a list to get any other part while missing  the rest by modifying the
+step size.
+
+Q4. Explain the distinctions between indexing and slicing.
+Ans. Index is done to access an element from the list, set and tuple but slicing is done to slice 
+or extract some selective values from a list to a new list.
+
+Q5. What happens if one of the slicing expression's indexes is out of range?
+Ans. Slicing outside the bounds of a sequence (at least for built-ins) doesn't cause an error. Indexing 
+returns a single item, but slicing returns a subsequence of items. So when you try to index a nonexistent 
+value, there's nothing to return. But when you slice a sequence outside of bounds, you can still return an 
+empty sequence.
+
+Q6. If you pass a list to a function, and if you want the function to be able to change the values of the
+list—so that the list is different after the function returns—what action should you avoid?
+Ans. We should reinitialize the list which is passed as parameter by the list which is returned by the
+function. Beside that we shouldn't send the copy of the list as a parameter.
+
+Q7. What is the concept of an unbalanced matrix?
+Ans. A  matrix where each  row doesn't contain same amount of elements.
+
+Q8. Why is it necessary to use either list comprehension or a loop to create arbitrarily large matrices?
+Ans. To create a matrix of predefined size and beside that using list comprehension is faster than using
+for loop which makes program more efficient.
