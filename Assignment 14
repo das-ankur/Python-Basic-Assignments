@@ -1,0 +1,43 @@
+1. What does RGBA stand for?
+Ans. RGBA is an extension of the RGB(Red, Green, Blue) color model. The acronym stands for red green blue alpha. The alpha value represents the level of transparency/opacity of 
+the color.
+
+2. From the Pillow module, how do you get the RGBA value of any images?
+Ans. 
+from PIL import Image
+img = Image.open(‘image.png’)
+rgba = img.convert(“RGBA”)
+datas = rgba.getdata()
+print(datas)
+
+3. What is a box tuple, and how does it work?
+Ans. The box. tuple submodule provides read-only access for the tuple userdata type. It allows, for a single tuple: selective retrieval of the field contents, retrieval of 
+information about size, iteration over all the fields, and conversion to a Lua table.
+
+4. Use your image and load in notebook then, How can you find out the width and height of an
+Image object?
+Ans.
+image = PIL. Image. open("sample.png")
+width, height = image. size
+print("Width: ",width)
+print("Height: ",height)
+
+5. What method would you call to get Image object for a 100×100 image, excluding the lower-left
+quarter of it?
+Ans. 
+
+6. After making changes to an Image object, how could you save it as an image file?
+Ans. 
+image.save()
+save() Saves this image under the given filename. If no format is specified, the format to use is determined from the filename extension, if possible. Keyword options can 
+be used to provide additional instructions to the writer.
+
+7. What module contains Pillow’s shape-drawing code?
+Ans. The 'ImageDraw' module provides simple 2D graphics support for Image Object. Generally, we use this module to create new images, annotate or retouch existing images 
+and to generate graphics on the fly for web use. The graphics commands support the drawing of shapes and annotation of text.
+
+8. Image objects do not have drawing methods. What kind of object does? How do you get this kind
+of object?
+Ans. Drawing object buffers instructions for drawing shapes into images, and then it can draw these shapes into zero or more images. 
+Syntax : with Drawing() as draw: Note: In the above syntax “as draw” is just a nomenclature and can be any string as needed. The Drawing function in Python wand take has no 
+parameter.
