@@ -1,0 +1,133 @@
+1. Make a class called Thing with no contents and print it. Then, create an object called example
+from this class and also print it. Are the printed values the same or different?
+Ans. 
+class Thing:
+	pass
+#Driver Program
+print(Thing)
+example = Thing()
+print(example)
+#No the two print statements are not same
+
+2. Create a new class called Thing2 and add the value 'abc' to the letters class attribute. Letters
+should be printed.
+Ans.
+class Thing2:
+	def __init__(self):
+		self.letters = 'abc'
+	def __str__(self):
+		print(letters)
+
+3. Make yet another class called, of course, Thing3. This time, assign the value 'xyz' to an instance
+(object) attribute called letters. Print letters. Do you need to make an object from the class to do
+this?
+Ans.
+class Thing2:
+	def __init__(self):
+		self.letters = 'xyz'
+	def __str__(self):
+		return letters
+#Driver Programs
+obj = Thing2()
+print(obj)
+#Yes, I need a object to do this.
+
+4. Create an Element class with the instance attributes name, symbol, and number. Create a class
+object with the values 'Hydrogen', 'H' and 1.
+Ans.
+class Element:
+	def __init__(self, name, symbol, number):
+		self.name = name
+		self.symbol = symbol
+		self.number = number
+#Driver Program
+obj = Element('Hydrogen', 'H', 1)
+
+5. Make a dictionary with these keys and values: 'name': 'Hydrogen', 'symbol': 'H', 'number': 1. Then,
+create an object called hydrogen from class Element using this dictionary.
+Ans.
+#Driver Program
+dict = {'name': 'Hydrogen', 'symbol': 'H', 'number': 1}
+obj  = Element(dict['name'], dict['symbol'], dict['number'])
+
+6. For the Element class, define a method called dump() that prints the values of the object’s
+attributes (name, symbol, and number). Create the hydrogen object from this new definition and
+use dump() to print its attributes.
+Ans.
+class Element:
+	def __init__(self, name, symbol, number):
+		self.name = name
+		self.symbol = symbol
+		self.number = number
+	def deump(self):
+		print("Name: ",self.name)
+		print('Symbol: ',self.symbol)
+		print('Number: ',self.number)
+#Driver Function
+hydrogen = Element('Hydrogen', 'H', 1)
+hydrogen.dump()
+
+7. Call print(hydrogen). In the definition of Element, change the name of method dump to __str__,
+create a new hydrogen object, and call print(hydrogen) again.
+Ans.
+class Element:
+	def __init__(self, name, symbol, number):
+		self.name = name
+		self.symbol = symbol
+		self.number = number
+	def __str__(self):
+		return  "Name: "+self.name+'\nSymbol: '=+self.symbol+'\nNumber: '+self.number
+#Driver Function
+hydrogen = Element('Hydrogen', 'H', 1)
+print(hydrogen)
+
+8. Modify Element to make the attributes name, symbol, and number private. Define a getter
+property for each to return its value.
+Ans. 
+class Element:
+	def __init__(self, name, symbol, number):
+		self.__name = name
+		self.__symbol = symbol
+		self.__number = number
+	def __str__(self):
+		return  "Name: "+self.__name+'\nSymbol: '=+self.__symbol+'\nNumber: '+self.__number
+	def getName(self):
+		return self.__name
+	def getSymbol(self):
+		return self.__symbol
+	def getNumber(self):
+		return self.__number
+
+9. Define three classes: Bear, Rabbit, and Octothorpe. For each, define only one method: eats(). This
+should return 'berries' (Bear), 'clover' (Rabbit), or 'campers' (Octothorpe). Create one object from
+each and print what it eats.
+Ans.
+class Bear:
+	def eats(self):
+		return 'berries'
+class Rabbit:
+	def eats(self):
+		return 'clover'
+class Octothorpe:
+	def eats(self):
+		return 'campers'
+
+10. Define these classes: Laser, Claw, and SmartPhone. Each has only one method: does(). This
+returns 'disintegrate' (Laser), 'crush' (Claw), or 'ring' (SmartPhone). Then, define the class Robot that
+has one instance (object) of each of these. Define a does() method for the Robot that prints what its
+component objects do.
+Ans.
+class Laser:
+	def does(self):
+		return 'disintegrate'
+class Claw:
+	def does(self):
+		return 'crush'
+class Smartphone:
+	def does(self):
+		return 'ring'
+class Robot(Laser, Claw, Smartphone):
+	def does(self):
+		print(Laser.show())
+		print(Claw.show())
+		print(Smartphone.show())
